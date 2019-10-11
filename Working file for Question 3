@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# cut -d, -f3 wages.csv | grep -v yearsSchool | paste -s -d+ - | bc --
+# cut -d, -f4 wages.csv | grep -v wage | paste -s -d+ - | bc --
+
+
+SUMYEARS=`cut -d, -f3 wages.csv | grep -v yearsSchool | paste -s -d+ - | bc --`
+SUMWAGE=`cut -d, -f4 wages.csv | grep -v wage | paste -s -d+ - | bc --`
+#echo $SUMYEARS
+#echo $SUMWAGE
+echo "$SUMYEARS / $SUMWAGE" | bc
