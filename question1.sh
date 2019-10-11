@@ -1,1 +1,1 @@
-sort --field-separator=',' wages.csv > sorted_wages.csv
+sort -k 2 --field-separator=',' wages.csv > sorted_wages.csv
