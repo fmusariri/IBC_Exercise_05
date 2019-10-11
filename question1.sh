@@ -1,1 +1,1 @@
-cat wages.csv | cut -d "," -f1,2 | sort -gk2
+sort --field-separator=',' wages.csv > sorted_wages.csv
